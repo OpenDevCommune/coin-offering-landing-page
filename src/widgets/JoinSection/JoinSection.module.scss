@@ -1,0 +1,42 @@
+.JoinSection {
+    display: flex;
+    flex-direction: column;
+}
+.hex {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0A4868;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    div {
+        position: relative;
+        height: 70px;
+        width: 70px;
+    }
+}
+
+.description{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 370px){
+    .description{
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 768px){
+
+}
+@media screen and (min-width: 960px) {
+
+}

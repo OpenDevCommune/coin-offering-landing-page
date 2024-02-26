@@ -1,0 +1,64 @@
+.PartnerSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 100px -100px 200px rgba(18, 142, 255, 0.1),
+    -100px 100px 200px rgba(18, 142, 255, 0.2);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        background: rgba(0,0,0,0.2);
+    }
+}
+
+.info {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 370px){
+    .info {
+        order: 1;
+        font-size: 1rem;
+        line-height: 2;
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 768px){
+    .info {
+        order: 0;
+    }
+}
+@media screen and (min-width: 960px) {
+
+}

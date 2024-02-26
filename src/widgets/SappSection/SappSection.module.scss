@@ -1,0 +1,91 @@
+.SappSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::before {
+        --size: 500px;
+        --speed: 50s;
+        --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+        content: "";
+        position: absolute;
+        right: -250px;
+        top: 350px;
+        z-index: -1;
+        width: var(--size);
+        height: var(--size);
+        filter: blur(calc(var(--size) / 4));
+        background-image: linear-gradient(hsl(158, 82, 57, 50%), hsl(252, 82, 57));
+        animation: rotate var(--speed) var(--easing) alternate infinite;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    &::after {
+        --size: 300px;
+        --speed: 50s;
+        --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+        content: "";
+        position: absolute;
+        left: -100px;
+        top: 350px;
+        z-index: -1;
+        width: var(--size);
+        height: var(--size);
+        filter: blur(calc(var(--size) / 4));
+        background-image: linear-gradient(hsl(158, 82, 57, 50%), hsl(252, 82, 57));
+        animation: rotate var(--speed) var(--easing) alternate infinite;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.hex {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0A4868;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5) inset;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    div {
+        position: relative;
+        height: 50px;
+        width: 50px;
+    }
+}
+.description {
+    text-align: center;
+}
+
+.purchaseBlock {
+    margin: 3rem 0;
+    padding: 1.5rem 2rem;
+    color: #71B7FF;
+    font-weight: 700;
+}
+@media screen and (min-width: 370px){
+    .SappSection {
+        text-align: center;
+        line-height: 2;
+        h3 {
+            margin-top: 4rem;
+        }
+    }
+
+}
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 768px){
+
+}
+@media screen and (min-width: 960px) {
+
+}

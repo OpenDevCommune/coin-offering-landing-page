@@ -1,0 +1,55 @@
+.Header {
+    background-color: rgba(4, 18, 25, 0.8);
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.content {
+    padding: 1.5rem 2rem;
+    max-width: var(--bp-xl);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 370px) {
+    .Header {
+        top: 0;
+    }
+    .content {
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media screen and (min-width: 370px){
+    .SappSection {
+        text-align: center;
+        line-height: 2;
+    }
+    .controls {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .controls {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+}
+@media screen and (min-width: 960px) {
+
+}

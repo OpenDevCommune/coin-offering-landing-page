@@ -1,0 +1,95 @@
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+:root {
+    --bg-color: #001019;
+    --c-white: #e1e1e1;
+
+
+    // break-points
+    --bp-s: 576px;
+    --bp-m: 768px;
+    --bp-l: 960px;
+    --bp-xl: 1280px;
+}
+
+body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--bg-color);
+    color: var(--c-white);
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background: #072b40;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #a46b17;
+        -webkit-border-radius: 2ex;
+    }
+}
+
+main {
+    width: 100%;
+    max-width: var(--bp-xl);
+    padding: 0 2rem;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+.mt3 {
+    margin-top: 3rem;
+}
+.mt4 {
+    margin-top: 4rem;
+}
+.mt5 {
+    margin-top: 5rem;
+}
+.mt6 {
+    margin-top: 6rem;
+}
+
+@media screen and (min-width: 370px){
+    html {
+        font-size: 12px;
+    }
+    main {
+        padding: 0 2rem;
+        max-width: 576px;
+    }
+    section {
+        margin-top: 7rem;
+    }
+}
+
+@media screen and (min-width: 576px){
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    html {
+        font-size: 14px;
+    }
+    main {
+        padding: 0 2rem;
+        max-width: var(--bp-l);
+    }
+}
+@media screen and (min-width: 960px){
+    html {
+        font-size: 16px;
+    }
+    main {
+        padding: 0 2rem;
+        max-width: var(--bp-xl);
+    }
+}

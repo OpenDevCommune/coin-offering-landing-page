@@ -1,0 +1,48 @@
+.GyberRealitySection {
+    display: flex;
+    flex-direction: column;
+}
+
+.hex {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.description {
+    text-align: center;
+    p {
+        color: #71B7FF;
+    }
+}
+
+.mt4 {
+    margin-top: 4rem;
+}
+
+
+@media screen and (min-width: 370px){
+    .purchaseBlock {
+
+    }
+}
+
+@media screen and (min-width: 576px){
+    .hex {
+        height: 150px;
+        width: 150px;
+
+    }
+}
+
+@media screen and (min-width: 768px){
+    .hex {
+        height: 200px;
+        width: 200px;
+
+    }
+}
+@media screen and (min-width: 960px) {
+
+}
