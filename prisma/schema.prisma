@@ -1,16 +1,18 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:database.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
-  id              String        @id @default(cuid())
-  username        String?       @unique
-  publicAddress   String?       @unique
-  nonce           String
-  expires         DateTime
+  id            String   @id @default(cuid())
+  username      String?  @unique
+  email         String?
+  publicAddress String?  @unique
+  nonce         String
+  expires       DateTime
 }

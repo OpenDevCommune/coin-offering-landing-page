@@ -7,6 +7,7 @@ import {useAccount} from "wagmi";
 import Account from "@/entites/SignUPForm/ui/Account";
 import ConnectMetamask from "@/entites/SignUPForm/ui/ConnectMetamask";
 import Button from "@/shared/ui/Button/Button";
+import UserRegistered from "./UserRegistered";
 
 
 interface SignUpFormProps {

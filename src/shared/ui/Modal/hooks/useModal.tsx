@@ -1,7 +1,7 @@
 "use client";
 import {createContext, PropsWithChildren, useContext, useState} from "react";
 import {Modal} from "../index";
-import SignUpForm from "@/entites/SignUPForm/ui/SignUpForm";
+import {SignUpForm} from "@/entites/SignUPForm/index";
 
 
 interface ModalContextProps {

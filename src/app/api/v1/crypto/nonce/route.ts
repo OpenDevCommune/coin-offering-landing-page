@@ -12,10 +12,10 @@ export async function POST(req: NextRequest) {
         const body = await req.json();
         const publicAddress:string = body.publicAddress;
         if (!publicAddress) {
-            return new NextResponse("not public address", {status: 400})
+            return NextResponse.json({message: "Not public address"}, {status: 400})
         }
         if (!isValidChecksumAddress(publicAddress)) {
-            return new NextResponse("Not valid public address", {status: 400})
+            return NextResponse.json({message: "Invalid public address"}, {status: 400})
         }
 
         const nonce = crypto.randomBytes(32).toString("hex")

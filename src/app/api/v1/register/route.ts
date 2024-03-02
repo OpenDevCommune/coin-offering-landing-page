@@ -7,10 +7,15 @@ function onValidUsername(username:string) {
     const pattern = /^[A-Za-z][A-Za-z0-9_]{6,29}$/
     return pattern.test(username)
 }
+
+function onValidEmail(email:string) {
+    const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+    return pattern.test(email)
+}
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const {username, publicAddress, signedNonce} = body;
+        const {username, email, publicAddress, signedNonce} = body;
 
         if (!publicAddress) {
             return NextResponse.json({message: "Invalid public address"}, {status: 400})
@@ -21,8 +26,16 @@ export async function POST(request: Request) {
         if (!username) {
             return NextResponse.json({message: "Username cannot be empty"}, {status: 400})
         }
+
+        if (!email) {
+            return NextResponse.json({message: "Email cannot be empty"}, {status: 400})
+        }
         if (!onValidUsername(username)) {
             return NextResponse.json({message: "Username must contain only letters and numbers and an underscore"}, {status: 400})
+        }
+
+        if (!onValidEmail(email)) {
+            return NextResponse.json({message: "Invalid Email. Try again!"}, {status: 400})
         }
 
         if (!isValidChecksumAddress(publicAddress)) {
@@ -50,7 +63,8 @@ export async function POST(request: Request) {
             await prisma.user.update({
                 where: {publicAddress},
                 data: {
-                    username
+                    username,
+                    email
                 }
             })
         } catch (error: any) {
