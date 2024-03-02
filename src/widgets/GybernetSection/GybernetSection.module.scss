@@ -23,6 +23,16 @@
             -100px 100px 200px rgba(18, 142, 255, 0.2);
 }
 
+
+.gybernet {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
 @media screen and (min-width: 370px){
 }
 

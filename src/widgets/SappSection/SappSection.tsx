@@ -10,6 +10,7 @@ import CardWrapper from "@/shared/ui/CardWrapper";
 import Button, {ButtonTheme} from "@/shared/ui/Button/Button";
 import UBLineTextBlock from "@/shared/ui/UBLineTextBlock/UBLineTextBlock";
 import {useModal} from "@/shared/ui/Modal";
+import {useWindowSize} from "@/shared/hooks/useWindowSize";
 
 interface SappSectionProps {
     classname?: string;
@@ -17,6 +18,7 @@ interface SappSectionProps {
 
 const SappSection = (props: SappSectionProps) => {
     const {classname = ""} = props;
+    const size = useWindowSize()
     const {setIsOpened} = useModal();
     return (
         <section className={cNames(cls.SappSection, {}, [classname])}>
@@ -29,14 +31,18 @@ const SappSection = (props: SappSectionProps) => {
                         alt={"sapp-phone"}
                         width={280}
                         height={400}
+                        style={{marginTop: "3rem"}}
                     />
 
+                {size[0] > 760 && (
                     <Image
                         src={"/images/tablet.png"}
                         alt={"sapp-tablet"}
                         width={650}
                         height={400}
                     />
+                )}
+
 
             </div>
             <HWrapper columns={"four"}>
@@ -149,7 +155,7 @@ const SappSection = (props: SappSectionProps) => {
                 Purchase 1B $Gbr (Compulsory)
             </UBLineTextBlock>
             <Button theme={ButtonTheme.BLUE} hasBackground={true} onClick={() => setIsOpened(true)}>
-                Sign up to SAPP
+                White list to SAPP
             </Button>
             <p className={"mt3"}>Done registering? Start earning by sharing personal content!</p>
         </section>

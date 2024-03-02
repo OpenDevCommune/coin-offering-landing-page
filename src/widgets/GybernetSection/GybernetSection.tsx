@@ -16,14 +16,14 @@ const GybernetSection = (props: GybernetSectionProps) => {
     const [width, height] = useWindowSize();
     return (
         <section className={cNames(cls.GybernetSection, {}, [classname])}>
-            <Title title={"Gybernet Launch (Public Offering)"}/>
+            <Title title={"GyberNet Launch (Public Offering)"}/>
             <HWrapper columns={width >= 760 ? "two" : "one"}>
                 <div className={cls.info}>
-                    <h3>Experience Gybernet&#39;s public offering on our independent Blockchain network.</h3>
+                    <h3>Experience GyberNet&#39;s Public Offering on our Independent Blockchain Network (Gybernet).</h3>
                     <p>Details:</p>
                     <ul>
-                        <li>Public pool price: 30m GBR = 1 USDT</li>
-                        <li>Liquidity: 100%</li>
+                        <li>Blockchain 3.0 created as part of a new type of distributed networks</li>
+                        <li>SocialChain adoption</li>
                         <li>Vesting: 24hrs (public pool will be set a day after Event)</li>
                     </ul>
                 </div>
@@ -38,6 +38,9 @@ const GybernetSection = (props: GybernetSectionProps) => {
                     }}
                         alt={"about-image"}
                     />
+                    <p className={cls.gybernet}>
+                        GyberNet Blockchain
+                    </p>
                 </div>
             </HWrapper>
         </section>

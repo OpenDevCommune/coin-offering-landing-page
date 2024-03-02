@@ -45,7 +45,7 @@ const GyberRealitySection = (props: GyberRealitySectionProps) => {
                     </div>
                     <div className={cls.description}>
                         <h2>African Region</h2>
-                        <p>Lagos, Nigeria - May 2024</p>
+                        <p>Lagos, Nigeria - Q2 2024</p>
                     </div>
 
                 </CardWrapper>
@@ -65,7 +65,7 @@ const GyberRealitySection = (props: GyberRealitySectionProps) => {
                 </CardWrapper>
             </HWrapper>
             <UBLineTextBlock classname={cls.mt4}>
-                Purchase tickets and become a partner or sponsor.
+                A link should link here to the Events page on the Website
             </UBLineTextBlock>
         </section>
     )

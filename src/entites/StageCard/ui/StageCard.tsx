@@ -8,6 +8,7 @@ interface StageCardProps {
 }
 
 const StageCard = (props: StageCardProps) => {
+    const  disabled = true;
     const {classname = ""} = props;
     return (
         <div className={cNames(cls.StageCard, {}, [classname])}>
@@ -41,7 +42,8 @@ const StageCard = (props: StageCardProps) => {
                 theme={ButtonTheme.ORANGE}
                 hasBackground={true}
                 fxCenter={true}
-            >Buy Tokens</Button>
+                disabled={disabled}
+            >{disabled ? "Coming soon" : "Buy Tokens"}</Button>
         </div>
     )
 }
