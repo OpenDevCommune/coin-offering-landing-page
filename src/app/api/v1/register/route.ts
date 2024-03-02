@@ -39,21 +39,21 @@ export async function POST(request: Request) {
         }
 
         if (!isValidChecksumAddress(publicAddress)) {
-            return new NextResponse("Invalid public address", {status: 400})
+            return NextResponse.json({message: "Invalid public address!"}, {status: 400});
         }
         const user = await prisma.user.findUnique({
             where: {publicAddress}
         })
-        if (!user?.nonce) return null;
+        if (!user?.nonce) return NextResponse.json({message: "Invalid nonce"}, {status: 400});
 
         const signerAddress = ethers.verifyMessage(
             user.nonce,
             signedNonce
         );
 
-        if (signerAddress !== publicAddress) return null;
+        if (signerAddress !== publicAddress) return NextResponse.json({message: "Invalid signed address"}, {status: 400});
 
-        if (user.expires < new Date()) return null;
+        if (user.expires < new Date()) return NextResponse.json({message: "Invalid nonce"}, {status: 400});
 
         const usernameIsExist = await prisma.user.findUnique({where: {username}})
         if (usernameIsExist) {
