@@ -17,9 +17,9 @@ const Providers = ({children}: ProviderType) => {
     return (
             <Web3Provider>
                 <QueryClientProvider client={queryClient}>
-        <ModalContextProvider>
-                    {children}
-        </ModalContextProvider>
+                    <ModalContextProvider>
+                        {children}
+                    </ModalContextProvider>
                 </QueryClientProvider>
             </Web3Provider>
     )
