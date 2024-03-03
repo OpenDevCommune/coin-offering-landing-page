@@ -81,7 +81,7 @@ const Account = (props: AccountProps) => {
         let signed;
         try {
             if (!signedNonce) {
-                const response = await axios.post("http://localhost:3000/api/v1/crypto/nonce", {publicAddress: address})
+                const response = await axios.post("/api/v1/crypto/nonce", {publicAddress: address})
                 signed = await signMessageAsync({message: response.data.nonce, account: address})
                 setSignedNonce(signed)
             }
@@ -89,7 +89,7 @@ const Account = (props: AccountProps) => {
             setError(error.response.data.message)
         }
 
-        await axios.post("http://localhost:3000/api/v1/register", {
+        await axios.post("/api/v1/register", {
             username: username,
             email: email,
             publicAddress: address,
