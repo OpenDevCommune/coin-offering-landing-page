@@ -50,6 +50,7 @@ const JoinSection = (props: JoinSectionProps) => {
             </HWrapper>
             <Subtitle text={"Join the Gybernaty community and make a global impact."}/>
             <Button
+                href={"https://gyber.org"}
                 theme={ButtonTheme.BLUE}
                 hasBackground={true}
                 fxCenter={true}

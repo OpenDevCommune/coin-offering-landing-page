@@ -52,6 +52,7 @@ const SeadRound = (props: SeadRoundProps) => {
                 The seed round provides all participants with exclusive opportunities
             </p>
             <Button
+                href={"https://gyber.org"}
                 theme={ButtonTheme.BLUE}
                 hasBackground={true}
             >Join</Button>

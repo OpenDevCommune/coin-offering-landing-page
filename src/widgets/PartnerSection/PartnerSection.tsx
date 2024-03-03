@@ -45,6 +45,7 @@ const PartnerSection = (props: PartnerSectionProps) => {
 
             </HWrapper>
             <Button
+                href={"https://gyber.org"}
                 theme={ButtonTheme.BLUE}
                 hasBackground={true}
                 fxCenter={true}
