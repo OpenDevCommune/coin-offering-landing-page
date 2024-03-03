@@ -111,6 +111,11 @@
     }
 }
 
+@media screen and (min-width: 360px){
+    .SignUpForm {
+        width: 350px;
+    }
+}
 
 @media screen and (min-width: 370px){
     .SignUpForm {

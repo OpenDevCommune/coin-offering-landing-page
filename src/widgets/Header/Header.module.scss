@@ -22,16 +22,13 @@
     gap: 2rem;
 }
 
-@media screen and (min-width: 370px) {
+@media screen and (min-width: 360px) {
     .Header {
         top: 0;
     }
     .content {
         padding: 1.5rem 2rem;
     }
-}
-
-@media screen and (min-width: 370px){
     .SappSection {
         text-align: center;
         line-height: 2;
@@ -40,6 +37,7 @@
         display: none;
     }
 }
+
 
 @media screen and (min-width: 576px){
     .controls {
