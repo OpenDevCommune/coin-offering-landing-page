@@ -7,6 +7,8 @@ import HWrapper from "@/shared/ui/HWrapper/HWrapper";
 import CardWrapper from "@/shared/ui/CardWrapper";
 import Image from "next/image";
 import UBLineTextBlock from "@/shared/ui/UBLineTextBlock/UBLineTextBlock";
+import Button from "@/shared/ui/Button/Button";
+
 
 interface GyberRealitySectionProps {
     classname?: string;
@@ -65,7 +67,9 @@ const GyberRealitySection = (props: GyberRealitySectionProps) => {
                 </CardWrapper>
             </HWrapper>
             <UBLineTextBlock classname={cls.mt4}>
-                A link should link here to the Events page on the Website
+                <a className={cls.link} href={"https://gyber.org/events"} target={"_blank"}>
+                    Go to the Events page on the our Website
+                </a>
             </UBLineTextBlock>
         </section>
     )
